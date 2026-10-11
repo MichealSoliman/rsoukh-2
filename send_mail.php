@@ -24,11 +24,11 @@ $configFile = __DIR__ . '/config.php';
 $config = file_exists($configFile) ? require $configFile : [];
 
 $recipientEmail = !empty($config['recipient_email']) ? trim($config['recipient_email']) : '';
-$fromName = !empty($config['from_name']) ? trim($config['from_name']) : 'رسوخ العمرانية - الحمراء';
+$fromName = !empty($config['from_name']) ? trim($config['from_name']) : 'رسوخ العمرانية - دروازة';
 $timezone = !empty($config['timezone']) ? $config['timezone'] : 'Asia/Riyadh';
-$projectTitle = !empty($config['project_title']) ? $config['project_title'] : 'بيانات العميل بالحمراء';
-$projectLoc = !empty($config['project_loc']) ? $config['project_loc'] : 'مستشفي الملك فهد حي الحمراء';
-$subjectText = !empty($config['email_subject']) ? $config['email_subject'] : 'بيانات العميل بالحمراء - مستشفي الملك فهد حي الحمراء';
+$projectTitle = !empty($config['project_title']) ? $config['project_title'] : 'بيانات العميل دروازة';
+$projectLoc = !empty($config['project_loc']) ? $config['project_loc'] : 'مستشفي شرق جدة حي النسيم';
+$subjectText = !empty($config['email_subject']) ? $config['email_subject'] : 'بيانات العميل دروازة - مستشفي شرق جدة حي النسيم';
 $mailerType = !empty($config['mailer_type']) ? strtolower(trim($config['mailer_type'])) : 'mail';
 
 // ضبط المنطقة الزمنية
@@ -247,8 +247,8 @@ $emailHtml = '
         <div class="header">
             <h1 class="brand-title">رسوخ العمرانية</h1>
             <div style="margin-top: 14px; margin-bottom: 8px; padding: 12px 18px; background: rgba(200, 164, 93, 0.22); border: 2px solid #c8a45d; border-radius: 10px; color: #fce7b0; font-size: 17px; font-weight: bold; line-height: 1.7; text-align: center;">
-                📍 بيانات العميل بالحمراء<br>
-                🏥 مستشفي الملك فهد حي الحمراء
+                📍 بيانات العميل دروازة<br>
+                🏥 مستشفي شرق جدة حي النسيم
             </div>
             <div class="badge">طلب تسجيل اهتمام</div>
         </div>
@@ -257,7 +257,7 @@ $emailHtml = '
             <table class="data-table" role="presentation">
                 <tr class="data-row">
                     <td class="data-label">المشروع / النموذج</td>
-                    <td class="data-value highlight">بيانات العميل بالحمراء - مستشفي الملك فهد حي الحمراء</td>
+                    <td class="data-value highlight">بيانات العميل دروازة - مستشفي شرق جدة حي النسيم</td>
                 </tr>
                 <tr class="data-row">
                     <td class="data-label">اسم الشركة</td>
@@ -293,7 +293,7 @@ $emailHtml = '
                 </tr>
                 <tr class="data-row">
                     <td class="data-label">المصدر</td>
-                    <td class="data-value">صفحة تسجيل الاهتمام (الحمراء)</td>
+                    <td class="data-value">صفحة تسجيل الاهتمام (دروازة)</td>
                 </tr>
             </table>
         </div>
@@ -349,7 +349,7 @@ if ($mailerType === 'smtp' && !empty($config['smtp']['host'])) {
 
 // تسجيل الطلب كنسخة احتياطية آمنة
 $logEntry = sprintf(
-    "[%s] [الحمراء - مستشفي الملك فهد] Name: %s | Phone: %s | City: %s | Payment: %s | Result: %s\n",
+    "[%s] [دروازة - مستشفي شرق جدة] Name: %s | Phone: %s | City: %s | Payment: %s | Result: %s\n",
     $submissionFullTime,
     $fullName,
     $phoneNumber,

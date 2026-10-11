@@ -276,21 +276,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const payload = {
           access_key: CONFIG.web3formsKey,
-          subject: 'بيانات العميل بالحمراء (مستشفي الملك فهد حي الحمراء) - ' + fullName,
-          from_name: 'رسوخ العمرانية - الحمراء',
-          'المشروع': 'بيانات العميل بالحمراء - مستشفي الملك فهد حي الحمراء',
+          subject: 'بيانات العميل دروازة مستشفي شرق جدة حي النسيم - ' + fullName,
+          from_name: 'رسوخ العمرانية - دروازة',
+          'المشروع': 'بيانات العميل دروازة - مستشفي شرق جدة حي النسيم',
           message: [
-            'بيانات العميل بالحمراء',
-            'مستشفي الملك فهد حي الحمراء',
+            'بيانات العميل دروازة',
+            'مستشفي شرق جدة حي النسيم',
             '━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
             '• اسم العميل: ' + fullName,
             '• رقم الجوال السعودي: ' + saudiPhoneInternational,
             '• المدينة: ' + cityName,
             '• طريقة الدفع: ' + paymentMethod,
-            '• الموقع / المشروع: مستشفي الملك فهد حي الحمراء',
+            '• الموقع / المشروع: مستشفي شرق جدة حي النسيم',
             '• اسم الشركة: ' + CONFIG.companyName,
             '• تاريخ ووقت الطلب: ' + formattedDate,
-            '• نوع الطلب: تسجيل اهتمام (الحمراء)',
+            '• نوع الطلب: تسجيل اهتمام (دروازة)',
             '━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
           ].join('\n')
         };
@@ -321,8 +321,8 @@ document.addEventListener('DOMContentLoaded', () => {
           phone_number: saudiPhoneInternational,
           city: cityName,
           payment_method: paymentMethod,
-          project_source: 'بيانات العميل بالحمراء - مستشفي الملك فهد حي الحمراء',
-          request_type: 'تسجيل اهتمام (الحمراء)',
+          project_source: 'بيانات العميل دروازة - مستشفي شرق جدة حي النسيم',
+          request_type: 'تسجيل اهتمام (دروازة)',
           website_url_check: honeypotInput ? honeypotInput.value : ''
         };
 
